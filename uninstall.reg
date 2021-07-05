@@ -1,6 +1,7 @@
 Windows Registry Editor Version 5.00
-; Youtube downloader context menu
-; by notthebee
+; Spotify downloader context menu
+; by Hesbadami
+; inspired by notthebee
 
 ; Deleting Youtube-DL
-[-HKEY_CLASSES_ROOT\Directory\Background\shell\YoutubeDL]
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\SpotDL]

@@ -1,0 +1,27 @@
+Windows Registry Editor Version 5.00
+; Spotify downloader context menu
+; by Hesbadami
+; inspired by notthebee
+
+; Deleting the previous version
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\SpotDL]
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\SpotDL]
+"MUIVerb"="spotdl"
+"SubCommands"=""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\SpotDL\shell]
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\SpotDL\shell\a_mp3]
+@="Download audio (MP3)"
+"Icon"="imageres.dll,103"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\SpotDL\shell\a_mp3\command]
+@="powershell.exe -Command \"spotdl $(Get-Clipboard) \""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\SpotDL\shell\b_wav]
+@="Download audio (OGG)"
+"Icon"="imageres.dll,80"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\SpotDL\shell\b_wav\command]
+@="powershell.exe -Command \"spotdl $(Get-Clipboard) --output-format ogg\""
