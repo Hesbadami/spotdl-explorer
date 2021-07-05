@@ -21,25 +21,13 @@ This script requires **[spotify-downloader](https://github.com/spotDL/spotify-do
 
 **To install spotdl and ffmpeg:**
 
-### Installing spotDL
-
-Install Python 3.6.1 or above: [64-bit](https://www.python.org/ftp/python/3.9.6/python-3.9.6-amd64.exe)  [32-bit](https://www.python.org/ftp/python/3.9.6/python-3.9.6.exe)
-
-![Add to PATH Image](res/2.png)
-
-Install spotDL by opening a command prompt and typing:
-
-```shell
-pip install spotdl
+Open a PowerShell as Administrator and run:
 ```
-```shell
+Set-ExecutionPolicy Bypass -Scope Process
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+choco install ffmpeg python
 pip install --upgrade spotipy ytmusicapi pytube spotdl --force
 ```
-
-### Installing FFmpeg
-
-[Windows Tutorial](https://windowsloop.com/install-ffmpeg-windows-10/)
-
 
 ### Uninstalling spotdl-explorer
 To uninstall the script, Double-click on the uninstall.reg file and confirm the changes.
